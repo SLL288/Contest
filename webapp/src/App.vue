@@ -1,22 +1,27 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Posts v-bind:Posts="PostsMessage"/>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <navbar />
+    <Posts v-bind:Posts="PostsMessage" v-bind:heads="heads" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import Posts from './components/Posts.vue'
+import Navbar from './components/Navbar.vue'
+// import PostHeadline from './components/PostHeadline.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Posts
+    Navbar,
+    Posts,
+    // PostHeadline
   },
   data(){
     return {
+      heads:"HeadLINEs",
       PostsMessage:[
         {id:1,
           title:"news1",
